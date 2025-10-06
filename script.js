@@ -37,6 +37,11 @@ function processBank() {
   let message = '';
 
   if (operation === 'deposit') {
+	if (amount < accountBalance) {
+      message = `Cannot deposit ${amount.toFixed(2)}: insufficient funds!`;
+      showTerminal(message);
+      return;
+	}
     accountBalance += amount;
 	cashBalance -= amount;
     message = `Deposited ${amount.toFixed(2)} to account.`;
@@ -84,4 +89,5 @@ function convertCurrency() {
 	// แสดง log ใน terminal
 	showTerminal(`Converted ${amount} ${currency} → ${result.toFixed(2)} ${currency === 'USD' ? 'THB' : 'USD'}`);
 }
+
 
