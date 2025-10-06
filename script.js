@@ -38,6 +38,7 @@ function processBank() {
 
   if (operation === 'deposit') {
     accountBalance += amount;
+	cashBalance -= amount;
     message = `Deposited ${amount.toFixed(2)} to account.`;
   } else if (operation === 'withdraw') {
     if (amount > accountBalance) {
@@ -83,3 +84,4 @@ function convertCurrency() {
 	// แสดง log ใน terminal
 	showTerminal(`Converted ${amount} ${currency} → ${result.toFixed(2)} ${currency === 'USD' ? 'THB' : 'USD'}`);
 }
+
