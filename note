@@ -1,0 +1,111 @@
+🟩1. ต้องมี Navbar และต้องมีรหัสนักศึกษากำกับไว้ 
+2. ต้องมี Textarea สำหรับใช้เป็นส่วนแสดงประวัติการฝากถอน 
+3. ต้องมีส่วนเนื้อหา Account Overview
+4. ต้องมีส่วนเนื้อหา Balance Information 
+    ต้องมี Input สำหรับใส่ค่า Account Balance (ยอดเงินคงเหลือบัญชี)
+    ต้องมี Input สำหรับใส่ค่า Cash Balance (ยอดเงินคงเหลือเงินสด)
+    ต้องมี Button สำหรับกำหนดค่ายอดเงินตาม Input ทั้งสอง
+5. ต้องมีส่วนเนื้อหา Bank Operation 
+    ต้องมี Input สำหรับใส่ค่ายอดเงินที่จะทำการฝากถอน
+    ผู้ใช้ต้องสามารถเลือกได้ว่าจะทำรายการแบบใด (Deposit ฝาก, Withdraw ถอน)
+    สามารถแยกออกมาเป็น 2 ปุ่มแทน Deposit และ Withdraw ได้
+6. ต้องมีส่วนเนื้อหา Currency Converter **ส่วนนี้ยังไม่ต้องทำให้ใช้งานได้
+    ต้องมี Input สำหรับใส่ค่ายอดเงินที่จะทำการแปลงค่า
+    ผู้ใช้สามารถเลือกได้ว่ายอดเงินที่ใส่ไปเป็นสกุลเงินชนิดใด (USD, THB)
+    ต้องมี Output สำหรับแสดงยอดเงินที่ผ่านการแปลงค่าแล้ว
+7. ต้องตกแต่งเว็บไซต์ให้สวยงาม สามารถใช้โค้ดจากภายนอกเสริมได้ 
+    สำหรับการเปลี่ยนฟอนต์ https://fonts.google.com/
+    สำหรับการตกแต่งปุ่มกด https://cssbuttons.io/
+    สำหรับการตกแต่งอินพุทต์ https://doodlenerd.com/html-control/css-textbox-generator
+    สามารถจัดรูปแบบหน้าเว็บไซต์ใหม่ได้
+    สามารถใช้รูปประกอบจากแหล่งอื่นได้ 
+
+		<div>
+			<label for="my_input">Enter any number:</label>
+			<input type="number" id="my_input" value="1">
+			<button type="button" onclick="calc(this.innerText)">+1</button>
+			<button type="button" onclick="calc(this.innerText)">-1</button>
+		</div>
+
+
+        <section>
+            <article class="bigbox">
+                <p class="subbox">จอ terminal</p>
+            </article>
+        </section>
+
+        <section class="gridbox">
+            <div>
+                <nav2>
+                    <h2>Account Overview</h2>
+                </nav2>
+                <article class="subgridbox">
+                    <img src="user.png" width="100" alt="User" class="subbox"/>
+                    <div class="subbox">
+                        <h3>Account Information</h3>
+                        <p class="subbox">Name: Supawit Thadseow</p>
+                        <p class="subbox">Type: Saving Account</p>
+                    </div>
+                </article>
+
+                <article class="subgridbox">
+                    <img src="calculator.png" width="100" alt="calculator" class="subbox"/>
+                    <div class="subbox">
+                        <h3>Balance Information</h3>
+                        <div class="subbox">
+                            <label for="my_account">Current account balance:</label>
+                            <input type="number" id="my_account" value="0">
+                        </div>
+                        <div class="subbox">
+                            <label for="my_cash">Current cash balance:</label>
+                            <input type="number" id="my_cash" value="0">
+                        </div>
+                        <button type="button" onclick="calc(this.innerText)">Change</button>
+                    </div>
+
+                </article>
+
+                <article class="subgridbox">
+                    <img src="barchart.png" width="100" alt="barchart" class="subbox"/>
+                    <div class="subbox">
+                        <h3>Bank Operation</h3>
+                        <div class="subbox">
+                            <select  id="options1">
+                                <option value="1">Deposit</option>
+                                <option value="2">Withdraw</option>
+                            </select>
+                            <label for="my_input"></label>
+                            <input type="number" id="my_input" value="0">
+                        </div>
+                        <button type="button" onclick="calc(this.innerText)">Proceed</button>
+                    </div>
+                </article>
+            </div>
+            <div>
+                <nav2>
+                    <h2>Financial Tools</h2>
+                </nav2>
+                <article class="subgridbox">
+                    <img src="coins.png" width="100" alt="coins" class="subbox"/>
+                    <div class="subbox">
+                        <h3>Currency Converter</h3>
+                        <div class="subbox">
+                            <label for="in_bal">Input balance:</label>
+                            <input type="number" id="in_bal" value="0">
+                        </div>
+                        <div class="subbox">
+                            <label for="out_bal">Output balance:</label>
+                            <input type="number" id="out_bal" value="0">
+                        </div>
+                        <div class="subbox">
+                            <label for="option2">Input currency:</label>
+                            <select  id="options2">
+                                <option value="1">USD</option>
+                                <option value="2">THB</option>
+                            </select>
+                            <button type="button" onclick="calc(this.innerText)">Convert</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>

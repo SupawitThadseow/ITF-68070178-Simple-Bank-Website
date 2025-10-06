@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ITF 2025</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <h2>67070057</h2>
+            <h1>ITF Website</h1>
+            <h2>Week 14</h2>
+        </nav>
+        <div class="container">
+            <h2 id="my-title">Welcome to my ITF Website!</h2>
+            <img src="Cool.png" width="96" alt="Cool" />
+        </div>
+
+        <section>
+            <article class="bigbox">
+                <p class="subbox" id="terminal">จอ terminal</p>
+            </article>
+        </section>
+
+        <section class="gridbox">
+            <div>
+                <nav2>
+                    <h2>Account Overview</h2>
+                </nav2>
+                <article class="subgridbox">
+                    <img src="user.png" width="100" alt="User" class="subbox"/>
+                    <div class="subbox">
+                        <h3>Account Information</h3>
+                        <p class="subbox">Name: Supawit Thadseow</p>
+                        <p class="subbox">Type: Saving Account</p>
+                    </div>
+                </article>
+
+                <article class="subgridbox">
+                    <img src="calculator.png" width="100" alt="calculator" class="subbox"/>
+                    <div class="subbox">
+                        <h3>Balance Information</h3>
+                        <div class="subbox">
+                            <label for="my_account">Current account balance:</label>
+                            <input type="number" id="my_account" value="0">
+                        </div>
+                        <div class="subbox">
+                            <label for="my_cash">Current cash balance:</label>
+                            <input type="number" id="my_cash" value="0">
+                        </div>
+                        <button type="button" onclick="setBalances()">Change</button>
+                    </div>
+                </article>
+
+                <article class="subgridbox">
+                    <img src="barchart.png" width="100" alt="barchart" class="subbox"/>
+                    <div class="subbox">
+                        <h3>Bank Operation</h3>
+                        <div class="subbox">
+                            <select id="options1">
+                                <option value="deposit">Deposit</option>
+                                <option value="withdraw">Withdraw</option>
+                            </select>
+                            <label for="my_input"></label>
+                            <input type="number" id="my_input" value="0">
+                        </div>
+                        <button type="button" onclick="processBank()">Proceed</button>
+                    </div>
+                </article>
+            </div>
+
+            <div>
+                <nav2>
+                <h2>Financial Tools</h2>
+                </nav2>
+                <article class="subgridbox">
+                    <img src="coins.png" width="100" alt="coins" class="subbox"/>
+                    <div class="subbox">
+                        <h3>Currency Converter</h3>
+                        <div class="subbox">
+                            <label for="in_bal">Input balance:</label>
+                            <input type="number" id="in_bal" value="0">
+                        </div>
+                        <div class="subbox">
+                            <label for="out_bal">Output balance:</label>
+                            <input type="number" id="out_bal" value="0" readonly>
+                        </div>
+                        <div class="subbox">
+                            <label for="options2">Input currency:</label>
+                            <select id="options2">
+                                <option value="USD">USD</option>
+                                <option value="THB">THB</option>
+                            </select>
+                            <button type="button" disabled>Convert</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </body>
+	<script src="script.js"></script>
+</html>
